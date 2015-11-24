@@ -1,8 +1,48 @@
 import React from 'react';
 
-class Lifecycle extends React.Component {
+var brandList = [
+  'Windows',
+  'Apple',
+];
+
+class Brand extends React.Component {
+  componentDidMount() {
+    console.log('Brand mounted');
+  }
   render() {
-    return (<h1>Lifecycle</h1>);
+    console.log('Brand rendering');
+    return (<p>{this.props.type}</p>);
+  }
+}
+
+class Lifecycle extends React.Component {
+
+  constructor() {
+    super();
+    this.state = {
+      type: ''
+    };
+  }
+  tick() {
+    this.setState({
+      type: brandList[Math.floor(Math.random() * 2)]
+    });
+  }
+
+  componentDidMount() {
+    this.interval = setInterval(this.tick.bind(this), 500);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.interval);
+  }
+  render() {
+    return (
+      <div>
+        <h1>Lifecycle</h1>
+        <Brand type={this.state.type} />
+      </div>
+    );
   }
 }
 

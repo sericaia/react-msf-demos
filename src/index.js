@@ -10,6 +10,7 @@ import MyState from './03-State.js';
 import Composition from './04-Composition.js';
 import Events from './05-Events.js';
 import Lifecycle from './06-Lifecycle.js';
+import LifecycleTwo from './07-LifecycleTwo.js';
 import NotFound from './NotFound.js';
 
 let routes = (
@@ -21,6 +22,7 @@ let routes = (
       <Route path="composition" component={Composition}/>
       <Route path="events" component={Events}/>
       <Route path="lifecycle" component={Lifecycle}/>
+      <Route path="lifecycletwo" component={LifecycleTwo}/>
       <Route path="*" component={NotFound}/>
     </Route>
   </Router>
