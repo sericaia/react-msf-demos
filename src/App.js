@@ -1,9 +1,33 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { render } from 'react-dom';
+import { Router, Route, Link } from 'react-router';
 
-export default class App extends Component {
+import MyFirstComponent from './01-MyFirstComponent.js';
+
+
+class App extends React.Component {
+
   render() {
+
+    let links = [
+      { to: "/myFirstComponent", value: "01 - MyFirstComponent"},
+      { to: "/myProps", value: "02 - Properties"},
+      { to: "/myState", value: "03 - State"},
+      { to: "/composition", value: "04 - Composition"},
+      { to: "/events", value: "05 - Events"},
+      { to: "/lifecycle", value: "06 - Lifecycle"},
+    ];
+
     return (
-      <h1>Hello, world.</h1>
+      <div>
+        {links.map(function(item) {
+          return (<li key={item.to}><Link to={item.to}>{item.value}</Link></li>);
+        })}
+
+        {this.props.children}
+      </div>
     );
   }
 }
+
+export default App;
