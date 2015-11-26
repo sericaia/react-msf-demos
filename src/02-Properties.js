@@ -1,9 +1,17 @@
 import React from 'react';
 
-class Properties extends React.Component {
+class MyPropertiesExample extends React.Component {
   render() {
-    return (<h1>Properties</h1>);
+    return (
+      <div>
+        <h1>Properties</h1>
+      </div>
+    );
   }
 }
 
-export default Properties;
+MyPropertiesExample.defaultProps = {
+  dish: 'shrimp with pasta'
+};
+
+export default MyPropertiesExample;

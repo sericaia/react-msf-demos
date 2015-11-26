@@ -1,8 +1,16 @@
 import React from 'react';
 
 class State extends React.Component {
+  constructor() {
+    super();
+  }
+
   render() {
-    return (<h1>State</h1>);
+    return (
+      <div>
+        <h1>State</h1>
+      </div>
+    );
   }
 }
 
