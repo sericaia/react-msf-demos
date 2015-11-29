@@ -13,8 +13,12 @@ class MyPropertiesExample extends React.Component {
 }
 
 MyPropertiesExample.defaultProps = {
-  dish: 'shrimp with pasta',
-  voo: 'doo'
+  dish: 'shrimp with pasta'//,
+  //voo: 'doo'
+};
+
+MyPropertiesExample.propTypes = {
+  voo: React.PropTypes.string.isRequired
 };
 
 class MyVodooComponent extends React.Component {
