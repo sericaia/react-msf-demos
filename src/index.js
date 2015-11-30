@@ -11,7 +11,6 @@ import Composition from './04-Composition.js';
 import Events from './05-Events.js';
 import LifecycleMounting from './06-LifecycleMounting.js';
 import LifecycleUpdate from './07-LifecycleUpdate.js';
-import LifecycleUnmounting from './08-LifecycleUnmounting.js';
 import NotFound from './NotFound.js';
 
 let routes = (
@@ -24,7 +23,6 @@ let routes = (
       <Route path="events" component={Events}/>
       <Route path="lifecycleMounting" component={LifecycleMounting}/>
       <Route path="lifecycleUpdate" component={LifecycleUpdate}/>
-      <Route path="lifecycleUnmounting" component={LifecycleUnmounting}/>
       <Route path="*" component={NotFound}/>
     </Route>
   </Router>

@@ -16,8 +16,7 @@ class App extends React.Component {
       { to: "/composition", value: "04 - Composition"},
       { to: "/events", value: "05 - Events"},
       { to: "/lifecycleMounting", value: "06 - Lifecycle - Mounting"},
-      { to: "/lifecycleUpdate", value: "07 - Lifecycle - Update"},
-      { to: "/lifecycleUnmounting", value: "08 - Lifecycle - Unmounting"},
+      { to: "/lifecycleUpdate", value: "07 - Lifecycle - Update"}
     ];
 
     return (
