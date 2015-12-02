@@ -14,7 +14,7 @@ class LifecycleUpdate extends React.Component {
 
   shouldComponentUpdate() {
     console.log('shouldComponentUpdate');
-    return false;//
+    return true; //try to change this to false
   }
 
   componentWillUpdate() {
